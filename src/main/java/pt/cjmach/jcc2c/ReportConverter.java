@@ -16,7 +16,9 @@
 package pt.cjmach.jcc2c;
 
 import java.io.File;
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.OutputStream;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.function.BiFunction;
@@ -63,8 +65,16 @@ public class ReportConverter {
         }
         Element target = tree.createElement("coverage");
         convertRoot(tree, target, sourceDirs);
-        System.err.println("[INFO] Writing output to file " + outputFile.getAbsolutePath());
-        nodeToFile(target, outputFile);
+        
+        if ("-".equals(outputFile.getName())) {
+            System.err.println("[INFO] Writing output to stdout...");
+            nodeToStream(target, System.out);
+        } else {
+            try (FileOutputStream fos = new FileOutputStream(outputFile)) {
+                System.err.println("[INFO] Writing output to file " + outputFile.getAbsolutePath());
+                nodeToStream(target, fos);
+            }
+        }
     }
     
     private void convertRoot(Document tree, Element target, File[] sourceDirs) throws IOException {
@@ -155,7 +165,7 @@ public class ReportConverter {
         return cMethod;
     }
     
-    private void nodeToFile(Element node, File outputFile) throws TransformerException {
+    private void nodeToStream(Element node, OutputStream outputStream) throws TransformerException {
         TransformerFactory factory = TransformerFactory.newInstance();
         Transformer transformer = factory.newTransformer();
         transformer.setOutputProperty(OutputKeys.OMIT_XML_DECLARATION, "no");
@@ -163,7 +173,7 @@ public class ReportConverter {
         transformer.setOutputProperty(OutputKeys.VERSION, "1.0");
         transformer.setOutputProperty(OutputKeys.ENCODING, "UTF-8");
         transformer.setOutputProperty("{http://xml.apache.org/xslt}indent-amount", "2");
-        transformer.transform(new DOMSource(node), new StreamResult(outputFile));
+        transformer.transform(new DOMSource(node), new StreamResult(outputStream));
     }
     
     private static final Pattern FILENAME_PATTERN = Pattern.compile("([^\\$]*)");

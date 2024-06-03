@@ -33,11 +33,11 @@ import static picocli.CommandLine.Parameters;
         description = "A tool for converting JaCoCo XML coverage reports into Cobertura XML coverage reports.")
 public class Launcher implements Callable<Integer> {
     @Option(names = {"-i", "--input"}, paramLabel = "FILE", required = true,
-            description = "Path to JaCoCo XML coverage report input file.")
+            description = "Path to JaCoCo XML coverage report input file. If set to '-', input will be read from stdin.")
     private File inputFile;
     
     @Option(names = {"-o", "--output"}, paramLabel = "FILE", required = true,
-            description = "Path to Cobertura XML coverage report output file.")
+            description = "Path to Cobertura XML coverage report output file. If set to '-', output will be writen to stdout.")
     private File outputFile;
     
     @Parameters(paramLabel = "SOURCE DIR", description = "One or more source directories.")
