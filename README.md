@@ -10,9 +10,14 @@ $ java -jar jcc2c.jar -h
 Usage: jcc2c [-hv] -i=FILE -o=FILE [SOURCE DIR...]
       [SOURCE DIR...]   One or more source directories.
   -h, --help            Print help and exit.
-  -i, --input=FILE      Path to JaCoCo XML coverage report input file.
-  -o, --output=FILE     Path to Cobertura XML coverage report output file.
+  -i, --input=FILE      Path to JaCoCo XML coverage report input file. If set
+                          to '-', input will be read from stdin. Required 
+                          option.
+  -o, --output=FILE     Path to Cobertura XML coverage report output file. If
+                          set to '-', output will be writen to stdout. Required 
+                          option.
   -v, --version         Print version and exit.
+
 ```
 
 Example:
