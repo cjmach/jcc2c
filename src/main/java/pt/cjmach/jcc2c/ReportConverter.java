@@ -220,9 +220,9 @@ public class ReportConverter {
         return Double.toString(result);
     }
     
-    private static String sum(double covered, double missed) {
-        double result = covered + missed;
-        return Double.toString(result);
+    private static String sum(int covered, int missed) {
+        int result = covered + missed;
+        return Integer.toString(result);
     }
     
     private static void convertLines(Document tree, List<Element> allLines, Element into) {
@@ -304,14 +304,5 @@ public class ReportConverter {
             }
         }
         return result;
-    }
-    
-    private static boolean lineIsAfter(Element jm, int startLine) {
-        String tempLine = jm.getAttribute("line");
-        int jmLine = 0;
-        if (tempLine != null) {
-            jmLine = Integer.parseInt(tempLine);
-        }
-        return jmLine > startLine;
     }
 }
