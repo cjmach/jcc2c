@@ -53,11 +53,17 @@ public class ReportConverter {
         factory.setFeature("http://apache.org/xml/features/nonvalidating/load-external-dtd", false);
         
         DocumentBuilder builder = factory.newDocumentBuilder();
-        Document tree = "-".equals(inputFile.getName()) 
-                ? builder.parse(System.in) 
-                : builder.parse(inputFile);
+        Document tree;
+        if ("-".equals(inputFile.getName())) {
+            System.err.println("[INFO] Parsing input from stdin...");
+            tree = builder.parse(System.in);
+        } else {
+            System.err.println("[INFO] Parsing input from file " + inputFile.getAbsolutePath());
+            tree = builder.parse(inputFile);
+        }
         Element target = tree.createElement("coverage");
         convertRoot(tree, target, sourceDirs);
+        System.err.println("[INFO] Writing output to file " + outputFile.getAbsolutePath());
         nodeToFile(target, outputFile);
     }
     
