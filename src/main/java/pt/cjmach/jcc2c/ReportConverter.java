@@ -221,8 +221,8 @@ public class ReportConverter {
     }
     
     private static String sum(int covered, int missed) {
-        double result = covered + missed;
-        return Double.toString(result);
+        int result = covered + missed;
+        return Integer.toString(result);
     }
     
     private static void convertLines(Document tree, List<Element> allLines, Element into) {
