@@ -1,7 +1,8 @@
 # jcc2c
 
-A tool written in Java to convert JaCoCo XML coverage reports to Cobertura 
-XML coverage reports.
+A tool written in Java to convert [JaCoCo](https://github.com/jacoco/jacoco) XML 
+coverage reports to [Cobertura](https://github.com/cobertura/cobertura) XML 
+coverage reports.
 
 # Usage
 
