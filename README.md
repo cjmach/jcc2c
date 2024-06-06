@@ -2,7 +2,13 @@
 
 A tool written in Java to convert [JaCoCo](https://github.com/jacoco/jacoco) XML 
 coverage reports to [Cobertura](https://github.com/cobertura/cobertura) XML 
-coverage reports.
+coverage reports. We also provide the same tool written in Nashorn Javascript (
+found [here](https://github.com/cjmach/jcc2c/tree/main/src/main/javascript/)), 
+but bear in mind that Nashorn engine was deprecated in JDK 11 (and removed in 
+JDK 15), in favor of GraalVM Javascript.
+
+`jcc2c` is still a necessity in case you are using tools or services that only 
+support Cobertura XML reports.
 
 # Usage
 
@@ -24,7 +30,7 @@ Usage: jcc2c [-hv] -i=FILE -o=FILE [SOURCE DIR...]
 Example:
 
 ```console
-$ java -jar jcc2c.jar -i jacoco-report.xml -o cobertura.xml src/main/java
+$ java -jar jcc2c.jar -i jacoco-report.xml -o cobertura-report.xml src/main/java
 ```
 
 # Building
