@@ -32,14 +32,23 @@ import static picocli.CommandLine.Parameters;
 @Command(name = "jcc2c",
         description = "A tool for converting JaCoCo XML coverage reports into Cobertura XML coverage reports.")
 public class Launcher implements Callable<Integer> {
+    /**
+     * 
+     */
     @Option(names = {"-i", "--input"}, paramLabel = "FILE", required = true,
             description = "Path to JaCoCo XML coverage report input file. If set to '-', input will be read from stdin. Required option.")
     private File inputFile;
     
+    /**
+     * 
+     */
     @Option(names = {"-o", "--output"}, paramLabel = "FILE", required = true,
             description = "Path to Cobertura XML coverage report output file. If set to '-', output will be writen to stdout. Required option.")
     private File outputFile;
     
+    /**
+     * 
+     */
     @Parameters(paramLabel = "SOURCE DIR", description = "(Optional) One or more source directories.")
     private File[] sourceRoots;
     
@@ -57,6 +66,11 @@ public class Launcher implements Callable<Integer> {
     @SuppressWarnings("FieldMayBeFinal")
     private boolean helpRequested = false;
     
+    /**
+     * 
+     * @return
+     * @throws Exception 
+     */
     @Override
     public Integer call() throws Exception {
         ReportConverter converter = new ReportConverter();
@@ -67,6 +81,10 @@ public class Launcher implements Callable<Integer> {
         return 0;
     }
 
+    /**
+     * 
+     * @param args 
+     */
     public static void main(String[] args) {
         CommandLine cmdLine = new CommandLine(new Launcher());
         cmdLine.setCaseInsensitiveEnumValuesAllowed(true);

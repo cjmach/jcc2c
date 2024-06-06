@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <!DOCTYPE report PUBLIC "-//JACOCO//DTD Report 1.0//EN" "report.dtd">
 <report name="Uniform">
-  <sessioninfo dump="1489136564739" id="eduardo-d294f805" start="1489136563002"/>
+  <sessioninfo dump="1489136564739" id="id-123" start="1489136563002"/>
   <package name="net/uniform/html/filters">
     <class name="net/uniform/html/filters/StringTrim">
       <method desc="()V" line="25" name="&lt;init&gt;">

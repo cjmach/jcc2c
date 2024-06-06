@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?><coverage branch-rate="0.5" complexity="1" line-rate="0.0" timestamp="1435852061">
+  <sources>
+    <source>./src/main/java</source>
+  </sources>
+  <packages>
+    <package branch-rate="0.5" complexity="1" line-rate="0.0" name="com.wmbest.myapplicationtest">
+      <classes>
+        <class branch-rate="0.5" complexity="1" filename="com/wmbest/myapplicationtest/MainActivity.java" line-rate="0.0" name="com.wmbest.myapplicationtest.MainActivity">
+          <methods>
+            <method branch-rate="0.0" complexity="1" line-rate="0.0" name="&lt;init&gt;" signature="()V">
+              <lines/>
+            </method>
+            <method branch-rate="0.5" complexity="2" line-rate="1.0" name="checkTheseLines" signature="()Ljava/lang/Boolean;">
+              <lines/>
+            </method>
+            <method branch-rate="0.0" complexity="1" line-rate="0.0" name="onCreate" signature="(Landroid/os/Bundle;)V">
+              <lines/>
+            </method>
+            <method branch-rate="0.0" complexity="1" line-rate="0.0" name="onCreateOptionsMenu" signature="(Landroid/view/Menu;)Z">
+              <lines/>
+            </method>
+            <method branch-rate="0.0" complexity="2" line-rate="0.0" name="onOptionsItemSelected" signature="(Landroid/view/MenuItem;)Z">
+              <lines/>
+            </method>
+          </methods>
+          <lines/>
+        </class>
+      </classes>
+    </package>
+  </packages>
+</coverage>
