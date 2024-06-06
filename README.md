@@ -2,8 +2,8 @@
 
 A tool written in Java to convert [JaCoCo](https://github.com/jacoco/jacoco) XML 
 coverage reports to [Cobertura](https://github.com/cobertura/cobertura) XML 
-coverage reports. We also provide the same tool written in Nashorn Javascript (
-found [here](https://github.com/cjmach/jcc2c/tree/main/src/main/javascript/)), 
+coverage reports. We also provide the same tool written in Nashorn Javascript 
+(found [here](https://github.com/cjmach/jcc2c/tree/main/src/main/javascript/)), 
 but bear in mind that Nashorn engine was deprecated in JDK 11 (and removed in 
 JDK 15), in favor of GraalVM Javascript.
 
