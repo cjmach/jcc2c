@@ -44,6 +44,16 @@ import org.xml.sax.SAXException;
  */
 public class ReportConverter {
     
+    /**
+     * 
+     * @param inputFile
+     * @param outputFile
+     * @param sourceDirs
+     * @throws ParserConfigurationException
+     * @throws SAXException
+     * @throws IOException
+     * @throws TransformerException 
+     */
     public void convert(File inputFile, File outputFile, File[] sourceDirs) 
             throws ParserConfigurationException, SAXException, IOException, TransformerException {
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
@@ -77,6 +87,13 @@ public class ReportConverter {
         }
     }
     
+    /**
+     * 
+     * @param tree
+     * @param target
+     * @param sourceDirs
+     * @throws IOException 
+     */
     private void convertRoot(Document tree, Element target, File[] sourceDirs) throws IOException {
         Element source = tree.getDocumentElement();
         NodeList list = source.getElementsByTagName("sessioninfo");
@@ -109,6 +126,12 @@ public class ReportConverter {
         addCounters(source, target);
     }
     
+    /**
+     * 
+     * @param tree
+     * @param pkg
+     * @return 
+     */
     private Element convertPackage(Document tree, Element pkg) {
         Element cPackage = tree.createElement("package");
         String nameAttr = pkg.getAttribute("name");
@@ -128,6 +151,13 @@ public class ReportConverter {
         return cPackage;
     }
     
+    /**
+     * 
+     * @param tree
+     * @param clazz
+     * @param pkg
+     * @return 
+     */
     private Element convertClass(Document tree, Element clazz, Element pkg) {
         Element cClass = tree.createElement("class");
         String nameAttr = clazz.getAttribute("name");
@@ -154,6 +184,13 @@ public class ReportConverter {
         return cClass;
     }
     
+    /**
+     * 
+     * @param tree
+     * @param method
+     * @param allLines
+     * @return 
+     */
     private Element convertMethod(Document tree, Element method, List<Element> allLines) {
         Element cMethod = tree.createElement("method");
         cMethod.setAttribute("name", method.getAttribute("name"));
@@ -165,6 +202,12 @@ public class ReportConverter {
         return cMethod;
     }
     
+    /**
+     * 
+     * @param node
+     * @param outputStream
+     * @throws TransformerException 
+     */
     private void nodeToStream(Element node, OutputStream outputStream) throws TransformerException {
         TransformerFactory factory = TransformerFactory.newInstance();
         Transformer transformer = factory.newTransformer();
@@ -176,6 +219,9 @@ public class ReportConverter {
         transformer.transform(new DOMSource(node), new StreamResult(outputStream));
     }
     
+    /**
+     * 
+     */
     private static final Pattern FILENAME_PATTERN = Pattern.compile("([^\\$]*)");
     
     private static String guessFilename(String nameAttr) {
@@ -186,16 +232,34 @@ public class ReportConverter {
         return nameAttr + ".java";
     }
     
+    /**
+     * 
+     * @param source
+     * @param target 
+     */
     private static void addCounters(Element source, Element target) {
         target.setAttribute("line-rate", counter(source, "LINE"));
         target.setAttribute("branch-rate", counter(source, "BRANCH"));
         target.setAttribute("complexity", counter(source, "COMPLEXITY", ReportConverter::sum));
     }
     
+    /**
+     * 
+     * @param source
+     * @param type
+     * @return 
+     */
     private static String counter(Element source, String type) {
         return counter(source, type, ReportConverter::fraction);
     }
     
+    /**
+     * 
+     * @param source
+     * @param type
+     * @param operation
+     * @return 
+     */
     private static String counter(Element source, String type, BiFunction<Integer, Integer, String> operation) {
         NodeList cs = source.getElementsByTagName("counter");
         Element c = null;
@@ -215,16 +279,34 @@ public class ReportConverter {
         return "0.0";
     }
     
+    /**
+     * 
+     * @param covered
+     * @param missed
+     * @return 
+     */
     private static String fraction(int covered, int missed) {
         double result = ((double) covered) / (covered + missed);
         return Double.toString(result);
     }
     
+    /**
+     * 
+     * @param covered
+     * @param missed
+     * @return 
+     */
     private static String sum(int covered, int missed) {
         int result = covered + missed;
         return Integer.toString(result);
     }
     
+    /**
+     * 
+     * @param tree
+     * @param allLines
+     * @param into 
+     */
     private static void convertLines(Document tree, List<Element> allLines, Element into) {
         Element lines = tree.createElement("lines");
         for (Element line : allLines) {
@@ -257,6 +339,12 @@ public class ReportConverter {
         into.appendChild(lines);
     }
     
+    /**
+     * 
+     * @param pkg
+     * @param filename
+     * @return 
+     */
     private static List<Element> findLines(Element pkg, String filename) {
         String basename = new File(filename).getName();
         List<Element> lines = new ArrayList<>();
@@ -274,6 +362,13 @@ public class ReportConverter {
         return lines;
     }
     
+    /**
+     * 
+     * @param method
+     * @param allMethods
+     * @param allLines
+     * @return 
+     */
     private static List<Element> getMethodLines(Element method, List<Element> allMethods, List<Element> allLines) {
         String tempLine = method.getAttribute("line");
         int startLine = 0;
