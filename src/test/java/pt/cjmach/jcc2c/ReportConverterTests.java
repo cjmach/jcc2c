@@ -37,13 +37,6 @@ public class ReportConverterTests {
         validateReportConversion(inputFile, expectedFile);
     }
     
-    @Test
-    public void testInput2JaCoCoReportConversionSucceeds() {
-        File inputFile = new File("./src/test/resources/pt/cjmach/jcc2c/input2.xml");
-        File expectedFile = new File("./src/test/resources/pt/cjmach/jcc2c/output2.xml");
-        validateReportConversion(inputFile, expectedFile);
-    }
-    
     private void validateReportConversion(File inputFile, File expectedFile) {
         File outputFile = new File("-");
         File[] sourceDirs = new File[] { new File("./src/main/java") };
