@@ -24,7 +24,7 @@ Usage: jcc2c [-hv] -i=FILE -o=FILE [SOURCE DIR...]
                           to '-', input will be read from stdin. Required 
                           option.
   -o, --output=FILE     Path to Cobertura XML coverage report output file. If
-                          set to '-', output will be writen to stdout. Required 
+                          set to '-', output will be written to stdout. Required 
                           option.
   -v, --version         Print version and exit.
 

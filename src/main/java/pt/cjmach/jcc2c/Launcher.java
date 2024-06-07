@@ -43,7 +43,7 @@ public class Launcher implements Callable<Integer> {
      * 
      */
     @Option(names = {"-o", "--output"}, paramLabel = "FILE", required = true,
-            description = "Path to Cobertura XML coverage report output file. If set to '-', output will be writen to stdout. Required option.")
+            description = "Path to Cobertura XML coverage report output file. If set to '-', output will be written to stdout. Required option.")
     private File outputFile;
     
     /**

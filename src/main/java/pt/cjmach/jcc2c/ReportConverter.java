@@ -348,13 +348,13 @@ public class ReportConverter {
     private static List<Element> findLines(Element pkg, String filename) {
         String basename = new File(filename).getName();
         List<Element> lines = new ArrayList<>();
-        NodeList sourceFiles = pkg.getElementsByTagName("sourceFile");
+        NodeList sourceFiles = pkg.getElementsByTagName("sourcefile");
         for (int i = 0; i < sourceFiles.getLength(); i++) {
             Element sourceFile = (Element) sourceFiles.item(i);
             if (basename.equals(sourceFile.getAttribute("name"))) {
                 NodeList sourceFileLines = sourceFile.getElementsByTagName("line");
-                for (int j = 0; j < sourceFileLines.getLength(); i++) {
-                    Element line = (Element) sourceFileLines.item(i);
+                for (int j = 0; j < sourceFileLines.getLength(); j++) {
+                    Element line = (Element) sourceFileLines.item(j);
                     lines.add(line);
                 }
             }
