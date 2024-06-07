@@ -1,25 +1,81 @@
-<?xml version="1.0" encoding="UTF-8"?><coverage branch-rate="0.5" complexity="1" line-rate="0.0" timestamp="1435852061">
+<?xml version="1.0" encoding="UTF-8"?><coverage branch-rate="0.0" complexity="1" line-rate="0.0" timestamp="1717787280">
   <sources>
     <source>./src/main/java</source>
   </sources>
   <packages>
-    <package branch-rate="0.5" complexity="1" line-rate="0.0" name="com.wmbest.myapplicationtest">
+    <package branch-rate="0.0" complexity="1" line-rate="0.0" name="pt.cjmach.jcc2c">
       <classes>
-        <class branch-rate="0.5" complexity="1" filename="com/wmbest/myapplicationtest/MainActivity.java" line-rate="0.0" name="com.wmbest.myapplicationtest.MainActivity">
+        <class branch-rate="0.0" complexity="1" filename="pt/cjmach/jcc2c/Launcher.java" line-rate="0.0" name="pt.cjmach.jcc2c.Launcher">
           <methods>
             <method branch-rate="0.0" complexity="1" line-rate="0.0" name="&lt;init&gt;" signature="()V">
               <lines/>
             </method>
-            <method branch-rate="0.5" complexity="2" line-rate="1.0" name="checkTheseLines" signature="()Ljava/lang/Boolean;">
+            <method branch-rate="0.0" complexity="3" line-rate="0.0" name="call" signature="()Ljava/lang/Integer;">
               <lines/>
             </method>
-            <method branch-rate="0.0" complexity="1" line-rate="0.0" name="onCreate" signature="(Landroid/os/Bundle;)V">
+            <method branch-rate="0.0" complexity="2" line-rate="0.0" name="main" signature="([Ljava/lang/String;)V">
               <lines/>
             </method>
-            <method branch-rate="0.0" complexity="1" line-rate="0.0" name="onCreateOptionsMenu" signature="(Landroid/view/Menu;)Z">
+            <method branch-rate="0.0" complexity="1" line-rate="0.0" name="getVersion" signature="()Ljava/lang/String;">
               <lines/>
             </method>
-            <method branch-rate="0.0" complexity="2" line-rate="0.0" name="onOptionsItemSelected" signature="(Landroid/view/MenuItem;)Z">
+          </methods>
+          <lines/>
+        </class>
+        <class branch-rate="0.5" complexity="1" filename="pt/cjmach/jcc2c/ReportConverter.java" line-rate="1.0" name="pt.cjmach.jcc2c.ReportConverter">
+          <methods>
+            <method branch-rate="0.0" complexity="1" line-rate="1.0" name="&lt;init&gt;" signature="()V">
+              <lines/>
+            </method>
+            <method branch-rate="0.5" complexity="3" line-rate="0.7727272727272727" name="convert" signature="(Ljava/io/File;Ljava/io/File;[Ljava/io/File;)V">
+              <lines/>
+            </method>
+            <method branch-rate="0.8333333333333334" complexity="4" line-rate="0.9565217391304348" name="convertRoot" signature="(Lorg/w3c/dom/Document;Lorg/w3c/dom/Element;[Ljava/io/File;)V">
+              <lines/>
+            </method>
+            <method branch-rate="1.0" complexity="2" line-rate="1.0" name="convertPackage" signature="(Lorg/w3c/dom/Document;Lorg/w3c/dom/Element;)Lorg/w3c/dom/Element;">
+              <lines/>
+            </method>
+            <method branch-rate="1.0" complexity="3" line-rate="1.0" name="convertClass" signature="(Lorg/w3c/dom/Document;Lorg/w3c/dom/Element;Lorg/w3c/dom/Element;)Lorg/w3c/dom/Element;">
+              <lines/>
+            </method>
+            <method branch-rate="0.0" complexity="1" line-rate="1.0" name="convertMethod" signature="(Lorg/w3c/dom/Document;Lorg/w3c/dom/Element;Ljava/util/List;)Lorg/w3c/dom/Element;">
+              <lines/>
+            </method>
+            <method branch-rate="0.0" complexity="1" line-rate="1.0" name="nodeToStream" signature="(Lorg/w3c/dom/Element;Ljava/io/OutputStream;)V">
+              <lines/>
+            </method>
+            <method branch-rate="1.0" complexity="2" line-rate="1.0" name="guessFilename" signature="(Ljava/lang/String;)Ljava/lang/String;">
+              <lines/>
+            </method>
+            <method branch-rate="0.0" complexity="1" line-rate="1.0" name="addCounters" signature="(Lorg/w3c/dom/Element;Lorg/w3c/dom/Element;)V">
+              <lines/>
+            </method>
+            <method branch-rate="0.0" complexity="1" line-rate="1.0" name="counter" signature="(Lorg/w3c/dom/Element;Ljava/lang/String;)Ljava/lang/String;">
+              <lines/>
+            </method>
+            <method branch-rate="1.0" complexity="4" line-rate="1.0" name="counter" signature="(Lorg/w3c/dom/Element;Ljava/lang/String;Ljava/util/function/BiFunction;)Ljava/lang/String;">
+              <lines/>
+            </method>
+            <method branch-rate="0.0" complexity="1" line-rate="1.0" name="fraction" signature="(II)Ljava/lang/String;">
+              <lines/>
+            </method>
+            <method branch-rate="0.0" complexity="1" line-rate="1.0" name="sum" signature="(II)Ljava/lang/String;">
+              <lines/>
+            </method>
+            <method branch-rate="0.16666666666666666" complexity="4" line-rate="0.16" name="convertLines" signature="(Lorg/w3c/dom/Document;Ljava/util/List;Lorg/w3c/dom/Element;)V">
+              <lines/>
+            </method>
+            <method branch-rate="0.16666666666666666" complexity="4" line-rate="0.45454545454545453" name="findLines" signature="(Lorg/w3c/dom/Element;Ljava/lang/String;)Ljava/util/List;">
+              <lines/>
+            </method>
+            <method branch-rate="0.5625" complexity="9" line-rate="0.8260869565217391" name="getMethodLines" signature="(Lorg/w3c/dom/Element;Ljava/util/List;Ljava/util/List;)Ljava/util/List;">
+              <lines/>
+            </method>
+            <method branch-rate="0.0" complexity="1" line-rate="1.0" name="lambda$getMethodLines$0" signature="(Ljava/lang/Integer;)I">
+              <lines/>
+            </method>
+            <method branch-rate="0.0" complexity="1" line-rate="1.0" name="&lt;clinit&gt;" signature="()V">
               <lines/>
             </method>
           </methods>
