@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><coverage branch-rate="0.0" complexity="1" line-rate="0.0" timestamp="1717787280">
+<?xml version="1.0" encoding="UTF-8"?><coverage branch-rate="0.0" complexity="1" line-rate="0.0" timestamp="1717884731">
   <sources>
     <source>./src/main/java</source>
   </sources>
@@ -243,16 +243,16 @@
                 <line branch="false" hits="1" number="220"/>
               </lines>
             </method>
-            <method branch-rate="1.0" complexity="2" line-rate="1.0" name="guessFilename" signature="(Ljava/lang/String;)Ljava/lang/String;">
+            <method branch-rate="0.5" complexity="2" line-rate="0.75" name="guessFilename" signature="(Ljava/lang/String;)Ljava/lang/String;">
               <lines>
                 <line branch="false" hits="1" number="228"/>
-                <line branch="true" condition-coverage="100.0% (2/2)" hits="1" number="229">
+                <line branch="true" condition-coverage="0.0% (1/2)" hits="1" number="229">
                   <conditions>
-                    <condition coverage="100.0%" number="0" type="jump"/>
+                    <condition coverage="0.0%" number="0" type="jump"/>
                   </conditions>
                 </line>
                 <line branch="false" hits="1" number="230"/>
-                <line branch="false" hits="1" number="232"/>
+                <line branch="false" hits="0" number="232"/>
               </lines>
             </method>
             <method branch-rate="0.0" complexity="1" line-rate="1.0" name="addCounters" signature="(Lorg/w3c/dom/Element;Lorg/w3c/dom/Element;)V">
@@ -308,75 +308,75 @@
                 <line branch="false" hits="1" number="301"/>
               </lines>
             </method>
-            <method branch-rate="0.16666666666666666" complexity="4" line-rate="0.16" name="convertLines" signature="(Lorg/w3c/dom/Document;Ljava/util/List;Lorg/w3c/dom/Element;)V">
+            <method branch-rate="1.0" complexity="4" line-rate="1.0" name="convertLines" signature="(Lorg/w3c/dom/Document;Ljava/util/List;Lorg/w3c/dom/Element;)V">
               <lines>
                 <line branch="false" hits="1" number="311"/>
-                <line branch="true" condition-coverage="0.0% (1/2)" hits="1" number="312">
+                <line branch="true" condition-coverage="100.0% (2/2)" hits="1" number="312">
                   <conditions>
-                    <condition coverage="0.0%" number="0" type="jump"/>
+                    <condition coverage="100.0%" number="0" type="jump"/>
                   </conditions>
                 </line>
-                <line branch="false" hits="0" number="313"/>
-                <line branch="false" hits="0" number="314"/>
-                <line branch="false" hits="0" number="315"/>
-                <line branch="false" hits="0" number="318"/>
-                <line branch="false" hits="0" number="319"/>
-                <line branch="true" condition-coverage="0.0% (0/2)" hits="0" number="320">
+                <line branch="false" hits="1" number="313"/>
+                <line branch="false" hits="1" number="314"/>
+                <line branch="false" hits="1" number="315"/>
+                <line branch="false" hits="1" number="318"/>
+                <line branch="false" hits="1" number="319"/>
+                <line branch="true" condition-coverage="100.0% (2/2)" hits="1" number="320">
                   <conditions>
-                    <condition coverage="0.0%" number="0" type="jump"/>
+                    <condition coverage="100.0%" number="0" type="jump"/>
                   </conditions>
                 </line>
-                <line branch="true" condition-coverage="0.0% (0/2)" hits="0" number="322">
+                <line branch="true" condition-coverage="100.0% (2/2)" hits="1" number="322">
                   <conditions>
-                    <condition coverage="0.0%" number="0" type="jump"/>
+                    <condition coverage="100.0%" number="0" type="jump"/>
                   </conditions>
                 </line>
-                <line branch="false" hits="0" number="323"/>
-                <line branch="false" hits="0" number="324"/>
-                <line branch="false" hits="0" number="325"/>
-                <line branch="false" hits="0" number="327"/>
-                <line branch="false" hits="0" number="328"/>
-                <line branch="false" hits="0" number="329"/>
-                <line branch="false" hits="0" number="330"/>
-                <line branch="false" hits="0" number="331"/>
-                <line branch="false" hits="0" number="332"/>
-                <line branch="false" hits="0" number="333"/>
-                <line branch="false" hits="0" number="334"/>
-                <line branch="false" hits="0" number="335"/>
-                <line branch="false" hits="0" number="337"/>
-                <line branch="false" hits="0" number="338"/>
+                <line branch="false" hits="1" number="323"/>
+                <line branch="false" hits="1" number="324"/>
+                <line branch="false" hits="1" number="325"/>
+                <line branch="false" hits="1" number="327"/>
+                <line branch="false" hits="1" number="328"/>
+                <line branch="false" hits="1" number="329"/>
+                <line branch="false" hits="1" number="330"/>
+                <line branch="false" hits="1" number="331"/>
+                <line branch="false" hits="1" number="332"/>
+                <line branch="false" hits="1" number="333"/>
+                <line branch="false" hits="1" number="334"/>
+                <line branch="false" hits="1" number="335"/>
+                <line branch="false" hits="1" number="337"/>
+                <line branch="false" hits="1" number="338"/>
                 <line branch="false" hits="1" number="339"/>
                 <line branch="false" hits="1" number="340"/>
               </lines>
             </method>
-            <method branch-rate="0.16666666666666666" complexity="4" line-rate="0.45454545454545453" name="findLines" signature="(Lorg/w3c/dom/Element;Ljava/lang/String;)Ljava/util/List;">
+            <method branch-rate="1.0" complexity="4" line-rate="1.0" name="findLines" signature="(Lorg/w3c/dom/Element;Ljava/lang/String;)Ljava/util/List;">
               <lines>
                 <line branch="false" hits="1" number="349"/>
                 <line branch="false" hits="1" number="350"/>
                 <line branch="false" hits="1" number="351"/>
-                <line branch="true" condition-coverage="0.0% (1/2)" hits="1" number="352">
+                <line branch="true" condition-coverage="100.0% (2/2)" hits="1" number="352">
                   <conditions>
-                    <condition coverage="0.0%" number="0" type="jump"/>
+                    <condition coverage="100.0%" number="0" type="jump"/>
                   </conditions>
                 </line>
-                <line branch="false" hits="0" number="353"/>
-                <line branch="true" condition-coverage="0.0% (0/2)" hits="0" number="354">
+                <line branch="false" hits="1" number="353"/>
+                <line branch="true" condition-coverage="100.0% (2/2)" hits="1" number="354">
                   <conditions>
-                    <condition coverage="0.0%" number="0" type="jump"/>
+                    <condition coverage="100.0%" number="0" type="jump"/>
                   </conditions>
                 </line>
-                <line branch="false" hits="0" number="355"/>
-                <line branch="true" condition-coverage="0.0% (0/2)" hits="0" number="356">
+                <line branch="false" hits="1" number="355"/>
+                <line branch="true" condition-coverage="100.0% (2/2)" hits="1" number="356">
                   <conditions>
-                    <condition coverage="0.0%" number="0" type="jump"/>
+                    <condition coverage="100.0%" number="0" type="jump"/>
                   </conditions>
                 </line>
-                <line branch="false" hits="0" number="357"/>
-                <line branch="false" hits="0" number="358"/>
+                <line branch="false" hits="1" number="357"/>
+                <line branch="false" hits="1" number="358"/>
                 <line branch="false" hits="1" number="362"/>
               </lines>
             </method>
-            <method branch-rate="0.5625" complexity="9" line-rate="0.8260869565217391" name="getMethodLines" signature="(Lorg/w3c/dom/Element;Ljava/util/List;Ljava/util/List;)Ljava/util/List;">
+            <method branch-rate="0.875" complexity="9" line-rate="1.0" name="getMethodLines" signature="(Lorg/w3c/dom/Element;Ljava/util/List;Ljava/util/List;)Ljava/util/List;">
               <lines>
                 <line branch="false" hits="1" number="373"/>
                 <line branch="false" hits="1" number="374"/>
@@ -419,19 +419,19 @@
               <lines>
                 <line branch="false" hits="1" number="391"/>
                 <line branch="false" hits="1" number="394"/>
-                <line branch="true" condition-coverage="0.0% (1/2)" hits="1" number="395">
+                <line branch="true" condition-coverage="100.0% (2/2)" hits="1" number="395">
                   <conditions>
-                    <condition coverage="0.0%" number="0" type="jump"/>
+                    <condition coverage="100.0%" number="0" type="jump"/>
                   </conditions>
                 </line>
-                <line branch="false" hits="0" number="396"/>
-                <line branch="true" condition-coverage="0.0% (0/4)" hits="0" number="397">
+                <line branch="false" hits="1" number="396"/>
+                <line branch="true" condition-coverage="100.0% (4/4)" hits="1" number="397">
                   <conditions>
-                    <condition coverage="0.0%" number="0" type="jump"/>
+                    <condition coverage="100.0%" number="0" type="jump"/>
                   </conditions>
                 </line>
-                <line branch="false" hits="0" number="398"/>
-                <line branch="false" hits="0" number="400"/>
+                <line branch="false" hits="1" number="398"/>
+                <line branch="false" hits="1" number="400"/>
                 <line branch="false" hits="1" number="401"/>
               </lines>
             </method>
@@ -568,13 +568,13 @@
             <line branch="false" hits="1" number="220"/>
             <line branch="false" hits="1" number="225"/>
             <line branch="false" hits="1" number="228"/>
-            <line branch="true" condition-coverage="100.0% (2/2)" hits="1" number="229">
+            <line branch="true" condition-coverage="0.0% (1/2)" hits="1" number="229">
               <conditions>
-                <condition coverage="100.0%" number="0" type="jump"/>
+                <condition coverage="0.0%" number="0" type="jump"/>
               </conditions>
             </line>
             <line branch="false" hits="1" number="230"/>
-            <line branch="false" hits="1" number="232"/>
+            <line branch="false" hits="0" number="232"/>
             <line branch="false" hits="1" number="241"/>
             <line branch="false" hits="1" number="242"/>
             <line branch="false" hits="1" number="243"/>
@@ -609,64 +609,64 @@
             <line branch="false" hits="1" number="300"/>
             <line branch="false" hits="1" number="301"/>
             <line branch="false" hits="1" number="311"/>
-            <line branch="true" condition-coverage="0.0% (1/2)" hits="1" number="312">
+            <line branch="true" condition-coverage="100.0% (2/2)" hits="1" number="312">
               <conditions>
-                <condition coverage="0.0%" number="0" type="jump"/>
+                <condition coverage="100.0%" number="0" type="jump"/>
               </conditions>
             </line>
-            <line branch="false" hits="0" number="313"/>
-            <line branch="false" hits="0" number="314"/>
-            <line branch="false" hits="0" number="315"/>
-            <line branch="false" hits="0" number="318"/>
-            <line branch="false" hits="0" number="319"/>
-            <line branch="true" condition-coverage="0.0% (0/2)" hits="0" number="320">
+            <line branch="false" hits="1" number="313"/>
+            <line branch="false" hits="1" number="314"/>
+            <line branch="false" hits="1" number="315"/>
+            <line branch="false" hits="1" number="318"/>
+            <line branch="false" hits="1" number="319"/>
+            <line branch="true" condition-coverage="100.0% (2/2)" hits="1" number="320">
               <conditions>
-                <condition coverage="0.0%" number="0" type="jump"/>
+                <condition coverage="100.0%" number="0" type="jump"/>
               </conditions>
             </line>
-            <line branch="true" condition-coverage="0.0% (0/2)" hits="0" number="322">
+            <line branch="true" condition-coverage="100.0% (2/2)" hits="1" number="322">
               <conditions>
-                <condition coverage="0.0%" number="0" type="jump"/>
+                <condition coverage="100.0%" number="0" type="jump"/>
               </conditions>
             </line>
-            <line branch="false" hits="0" number="323"/>
-            <line branch="false" hits="0" number="324"/>
-            <line branch="false" hits="0" number="325"/>
-            <line branch="false" hits="0" number="327"/>
-            <line branch="false" hits="0" number="328"/>
-            <line branch="false" hits="0" number="329"/>
-            <line branch="false" hits="0" number="330"/>
-            <line branch="false" hits="0" number="331"/>
-            <line branch="false" hits="0" number="332"/>
-            <line branch="false" hits="0" number="333"/>
-            <line branch="false" hits="0" number="334"/>
-            <line branch="false" hits="0" number="335"/>
-            <line branch="false" hits="0" number="337"/>
-            <line branch="false" hits="0" number="338"/>
+            <line branch="false" hits="1" number="323"/>
+            <line branch="false" hits="1" number="324"/>
+            <line branch="false" hits="1" number="325"/>
+            <line branch="false" hits="1" number="327"/>
+            <line branch="false" hits="1" number="328"/>
+            <line branch="false" hits="1" number="329"/>
+            <line branch="false" hits="1" number="330"/>
+            <line branch="false" hits="1" number="331"/>
+            <line branch="false" hits="1" number="332"/>
+            <line branch="false" hits="1" number="333"/>
+            <line branch="false" hits="1" number="334"/>
+            <line branch="false" hits="1" number="335"/>
+            <line branch="false" hits="1" number="337"/>
+            <line branch="false" hits="1" number="338"/>
             <line branch="false" hits="1" number="339"/>
             <line branch="false" hits="1" number="340"/>
             <line branch="false" hits="1" number="349"/>
             <line branch="false" hits="1" number="350"/>
             <line branch="false" hits="1" number="351"/>
-            <line branch="true" condition-coverage="0.0% (1/2)" hits="1" number="352">
+            <line branch="true" condition-coverage="100.0% (2/2)" hits="1" number="352">
               <conditions>
-                <condition coverage="0.0%" number="0" type="jump"/>
+                <condition coverage="100.0%" number="0" type="jump"/>
               </conditions>
             </line>
-            <line branch="false" hits="0" number="353"/>
-            <line branch="true" condition-coverage="0.0% (0/2)" hits="0" number="354">
+            <line branch="false" hits="1" number="353"/>
+            <line branch="true" condition-coverage="100.0% (2/2)" hits="1" number="354">
               <conditions>
-                <condition coverage="0.0%" number="0" type="jump"/>
+                <condition coverage="100.0%" number="0" type="jump"/>
               </conditions>
             </line>
-            <line branch="false" hits="0" number="355"/>
-            <line branch="true" condition-coverage="0.0% (0/2)" hits="0" number="356">
+            <line branch="false" hits="1" number="355"/>
+            <line branch="true" condition-coverage="100.0% (2/2)" hits="1" number="356">
               <conditions>
-                <condition coverage="0.0%" number="0" type="jump"/>
+                <condition coverage="100.0%" number="0" type="jump"/>
               </conditions>
             </line>
-            <line branch="false" hits="0" number="357"/>
-            <line branch="false" hits="0" number="358"/>
+            <line branch="false" hits="1" number="357"/>
+            <line branch="false" hits="1" number="358"/>
             <line branch="false" hits="1" number="362"/>
             <line branch="false" hits="1" number="373"/>
             <line branch="false" hits="1" number="374"/>
@@ -705,19 +705,19 @@
             </line>
             <line branch="false" hits="1" number="391"/>
             <line branch="false" hits="1" number="394"/>
-            <line branch="true" condition-coverage="0.0% (1/2)" hits="1" number="395">
+            <line branch="true" condition-coverage="100.0% (2/2)" hits="1" number="395">
               <conditions>
-                <condition coverage="0.0%" number="0" type="jump"/>
+                <condition coverage="100.0%" number="0" type="jump"/>
               </conditions>
             </line>
-            <line branch="false" hits="0" number="396"/>
-            <line branch="true" condition-coverage="0.0% (0/4)" hits="0" number="397">
+            <line branch="false" hits="1" number="396"/>
+            <line branch="true" condition-coverage="100.0% (4/4)" hits="1" number="397">
               <conditions>
-                <condition coverage="0.0%" number="0" type="jump"/>
+                <condition coverage="100.0%" number="0" type="jump"/>
               </conditions>
             </line>
-            <line branch="false" hits="0" number="398"/>
-            <line branch="false" hits="0" number="400"/>
+            <line branch="false" hits="1" number="398"/>
+            <line branch="false" hits="1" number="400"/>
             <line branch="false" hits="1" number="401"/>
           </lines>
         </class>
