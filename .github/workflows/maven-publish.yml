@@ -34,6 +34,8 @@ jobs:
         GITHUB_TOKEN: ${{ github.token }}
         
     - name: Upload jar to release
-      run: gh release upload $GITHUB_REF $GITHUB_WORKSPACE/target/jcc2c-*.jar
+      run: |
+        echo "Uploading to ref ${{ github.event.release.tag_name }}..."
+        gh release upload ${{ github.event.release.tag_name }} ${{ github.workspace }}/target/jcc2c-*.jar
       env:
         GITHUB_TOKEN: ${{ github.token }}
