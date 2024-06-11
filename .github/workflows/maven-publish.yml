@@ -32,3 +32,8 @@ jobs:
       run: mvn deploy -s $GITHUB_WORKSPACE/settings.xml
       env:
         GITHUB_TOKEN: ${{ github.token }}
+        
+    - name: Upload jar to release
+      run: gh release upload $GITHUB_REF $GITHUB_WORKSPACE/target/jcc2c-*.jar
+      env:
+        GITHUB_TOKEN: ${{ github.token }}
